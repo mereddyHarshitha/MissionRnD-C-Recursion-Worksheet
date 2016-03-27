@@ -23,8 +23,14 @@
 */
 #include "stdafx.h"
 
+int fibonacci(int i){
 
+	if (i <= 1)
+		return i;
+
+	return fibonacci(i - 1) + fibonacci(i - 2);
+}
 int get_steps(int s)
 {
-	return 0;
+	return fibonacci(s + 1);
 }
